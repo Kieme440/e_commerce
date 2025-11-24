@@ -17,6 +17,12 @@ class RegisterPage extends StatelessWidget {
                 icon: Icon(Icons.email_rounded),
               ),
             ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "Pasword",
+                hintText: "Enter Your Password",
+              ),
+            ),
           ],
         ),
       ),
