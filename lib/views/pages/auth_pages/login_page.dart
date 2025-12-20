@@ -1,5 +1,7 @@
+import 'package:e_commerce/views/pages/auth_pages/loginpage2.dart';
 import 'package:e_commerce/views/pages/auth_pages/register_page.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -100,12 +102,20 @@ class LoginPage extends StatelessWidget {
               width: 300,
 
               child: Center(
-                child: Text(
-                  "Continue",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xff262d44),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Loginpage2()),
+                    );
+                  },
+                  child: Text(
+                    "Continue",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xff262d44),
+                    ),
                   ),
                 ),
               ),
@@ -115,47 +125,72 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  width: 50,
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.white30,
+
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  width: 40,
-                  height: 40,
-                  child: Image.asset("images/FB.png"),
+
+                  child: Center(
+                    child: FaIcon(
+                      FontAwesomeIcons.facebook,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
 
                 SizedBox(width: 20),
 
                 Container(
+                  width: 50,
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.white30,
+
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  width: 40,
-                  height: 40,
-                  child: Image.asset("images/Google.png"),
+
+                  child: Center(
+                    child: FaIcon(
+                      FontAwesomeIcons.xTwitter,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
 
                 SizedBox(width: 20),
                 Container(
+                  width: 50,
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.white30,
+
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  width: 40,
-                  height: 40,
-                  child: Image.asset("images/x.png"),
+
+                  child: Center(
+                    child: FaIcon(FontAwesomeIcons.google, color: Colors.white),
+                  ),
                 ),
 
                 SizedBox(width: 20),
                 Container(
+                  width: 50,
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.white30,
+
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                   ),
-                  width: 40,
-                  height: 40,
-                  child: Image.asset("images/insta.avif"),
+
+                  child: Center(
+                    child: FaIcon(
+                      FontAwesomeIcons.instagram,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ],
             ),

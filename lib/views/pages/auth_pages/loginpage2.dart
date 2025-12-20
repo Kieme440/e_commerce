@@ -1,10 +1,12 @@
-import 'package:e_commerce/views/pages/auth_pages/loginpage2.dart';
+import 'package:e_commerce/views/pages/auth_pages/login_page.dart';
+import 'package:e_commerce/views/pages/auth_pages/register_page.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class RegisterPage extends StatelessWidget {
+class Loginpage2 extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  RegisterPage({super.key});
+  Loginpage2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,62 +18,13 @@ class RegisterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Create Your Account",
+              "Welcome Back",
               style: TextStyle(
                 color: Color(0xffE3A775),
                 fontWeight: FontWeight.bold,
                 fontSize: 35,
               ),
               textAlign: TextAlign.justify,
-            ),
-            SizedBox(height: 50),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  width: 198,
-                  padding: EdgeInsets.only(left: 10, right: 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      style: BorderStyle.solid,
-                      color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(borderSide: BorderSide.none),
-                      label: Text(
-                        "First Name",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-
-                      icon: Icon(Icons.person, color: Colors.white),
-                    ),
-                  ),
-                ),
-                SizedBox(width: 12),
-
-                Container(
-                  width: 198,
-                  padding: EdgeInsets.only(left: 10, right: 10),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      style: BorderStyle.solid,
-                      color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(borderSide: BorderSide.none),
-                      labelText: "Last Name",
-                      labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                      icon: Icon(Icons.person, color: Colors.white),
-                    ),
-                  ),
-                ),
-              ],
             ),
 
             SizedBox(height: 20),
@@ -89,33 +42,11 @@ class RegisterPage extends StatelessWidget {
                   border: UnderlineInputBorder(borderSide: BorderSide.none),
                   labelText: "Username",
                   labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                  icon: Icon(
-                    Icons.supervised_user_circle_rounded,
-                    color: Colors.white,
-                  ),
+                  icon: FaIcon(FontAwesomeIcons.user, color: Colors.white),
                 ),
               ),
             ),
 
-            SizedBox(height: 20),
-            Container(
-              padding: EdgeInsets.only(left: 10, right: 10),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  style: BorderStyle.solid,
-                  color: Colors.white,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  border: UnderlineInputBorder(borderSide: BorderSide.none),
-                  labelText: "Email",
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                  icon: Icon(Icons.email_rounded, color: Colors.white),
-                ),
-              ),
-            ),
             SizedBox(height: 20),
             Container(
               padding: EdgeInsets.only(left: 10, right: 10),
@@ -131,7 +62,7 @@ class RegisterPage extends StatelessWidget {
                   border: UnderlineInputBorder(borderSide: BorderSide.none),
                   labelText: "Password",
                   labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                  icon: Icon(Icons.password, color: Colors.white),
+                  icon: FaIcon(FontAwesomeIcons.lock, color: Colors.white),
                 ),
               ),
             ),
@@ -146,7 +77,7 @@ class RegisterPage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "Sign Up",
+                  "Login",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -160,7 +91,7 @@ class RegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  "Have an Account?",
+                  "Don't have an Account?",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
                 SizedBox(width: 10),
@@ -168,11 +99,11 @@ class RegisterPage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Loginpage2()),
+                      MaterialPageRoute(builder: (context) => RegisterPage()),
                     );
                   },
                   child: Text(
-                    "Login",
+                    "Sign Up",
                     style: TextStyle(color: Color(0xffE3A775), fontSize: 20),
                   ),
                 ),
