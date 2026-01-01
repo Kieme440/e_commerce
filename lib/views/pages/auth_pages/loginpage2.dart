@@ -1,4 +1,3 @@
-import 'package:e_commerce/views/pages/auth_pages/login_page.dart';
 import 'package:e_commerce/views/pages/auth_pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
